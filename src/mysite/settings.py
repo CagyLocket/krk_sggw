@@ -27,6 +27,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# It tells Django to use this model for custom users
+AUTH_USER_MODEL = "account.Account"
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.AllowAllUsersModelBackend',
+    'account.backends.CaseInsensitiveModelBackend'
+)
+
+
 
 # Application definition
 
@@ -34,6 +42,7 @@ INSTALLED_APPS = [
     
     #My apps
     'personal',
+    'account',
 
     #Third party apps
     'django.contrib.admin',
