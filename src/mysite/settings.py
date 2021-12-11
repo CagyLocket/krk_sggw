@@ -25,6 +25,20 @@ SECRET_KEY = 'crhky09gv3c#30ym206+mt-(212w4^xotndal)yjf^@%btvun2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
+
+# Django e-mail for development
+if DEBUG:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' # During development only
+
+
+
+
+
+
+
+
+
 ALLOWED_HOSTS = []
 
 # It tells Django to use this model for custom users
